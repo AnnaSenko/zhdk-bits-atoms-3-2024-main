@@ -1,12 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
+  font-family: 'Montserrat';
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     height: auto;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     margin-top: 10px;
     margin-left: 20px;
   }
@@ -18,7 +18,7 @@ body {
   }
   
   h1 {
-    font-size: 24px;
+    font-weight: 700; /* Bold для заголовків */
     margin-bottom: 10px;
   }
   
@@ -36,108 +36,130 @@ body {
     justify-content: left;
     align-items: center;
     color: rgb(0, 0, 0);
-    font-weight: medium;
+    padding: 20px;
+    font-weight: 400; /* Regular weight */
     font-size: 16px;
   }
-  
+
   .food {
-    background-color: #e57373;
+    background-color: #EC9898;
     color: black;
     flex: 3;
   }
   
   .other {
-    background-color: #e0e0e0;
+    background-color: #F5F5F5;
     color: black;
     flex: 7;
   }
   
   .animal {
-    background-color: #ffa726;
+    background-color: #FBBA74;
     color: black;
     flex: 5.8;
   }
   
   .plant {
-    background-color: #fff176;
+    background-color: #FAF59E;
     color: black;
     flex: 4.2;
   }
   
+  /* Ефект hovering для Food */
+.food:hover {
+  background-color: #E67575;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Ефект hovering для Animal products */
+.animal:hover {
+  background-color: #F9A03F;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Ефект hovering для Plant-based */
+.plant:hover {
+  background-color: #F7F06D;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
   .beef {
-    background-color: #f57c00;
+    background-color: #D6740A;
     color: black;
     flex: 2.9;
   }
   
   .dairy {
-    background-color: #fb8c00;
+    background-color: #EA7E0B;
     color: black;
     flex: 0.9;
   }
   
   .lamb {
-    background-color: #ffb74d;
+    background-color: #F59229;
     color: black;
     flex: 0.7;
   }
   
   .pork {
-    background-color: #ffcc80;
+    background-color: #F8B062;
     color: black;
     flex: 0.6;
   }
   
   .chicken {
-    background-color: #ffe0b2;
+    background-color: #FBCE9D;
     color: black;
     flex: 0.5;
   }
   
   .eggs {
-    background-color: #fff3e0;
+    background-color: #FDE1C4;
     color: black;
     flex: 0.2;
   }
   
   .vegetable {
-    background-color: #cddc39;
+    background-color: #D5CB0B;
     color: black;
     flex: 3;
   }
   
   .grains {
-    background-color: #d4e157;
+    background-color: #E9DE0C;
     color: black;
     flex: 2.5;
   }
   
   .legumes {
-    background-color: #dce775;
+    background-color: #F3E816;
     color: black;
     flex: 1.5;
   }
   
   .fruits {
-    background-color: #e6ee9c;
+    background-color: #F6EE51;
     color: black;
     flex: 1.5;
   }
   
   .nuts {
-    background-color: #f0f4c3;
+    background-color: #F9F38B;
     color: black;
     flex: 0.8;
   }
   
   .oils {
-    background-color: #f9fbe7;
+    background-color: #FBF7B1;
     color: black;
     flex: 0.5;
   }
   
   .others {
-    background-color: #ffffff;
+    background-color: #FDFBD8;
     color: black;
     flex: 0.1;
   }
@@ -145,7 +167,7 @@ body {
   .arrow {
     margin-top: 20px;
     font-weight: semibold;
-    font-size: 40px;
+    font-size: 700;
     cursor: pointer;
     text-align: left;
     margin-left: 180px;
