@@ -8,6 +8,7 @@
     <script type="module" src="./main.js" defer></script>
   </head>
   <body>
+    <!-- Перший графік -->
     <div class="chart-container">
       <h1>Global emission 5.23 gt CO<sub>2</sub></h1>
       <div class="bar-chart">
@@ -18,8 +19,31 @@
           <span>Other GHE<br />70%</span>
         </div>
       </div>
-      <div class="arrow">
+      <div class="arrow" id="arrow1">
         <span>&#8595;</span>
+      </div>
+    </div>
+
+    <!-- Другий графік -->
+    <div class="chart-container hidden" id="secondChart">
+      <h1>Food industry emission 1.36 gt CO<sub>2</sub></h1>
+      <div class="bar-chart">
+        <div class="bar animal">
+          <span>Animal products<br />58%</span>
+        </div>
+        <div class="bar plant">
+          <span>Plant-based<br />42%</span>
+        </div>
+      </div>
+      <div class="arrows">
+        <!-- Стрілка для Animal products -->
+        <div class="arrow" id="animalArrow">
+          <span>&#8595;</span>
+        </div>
+        <!-- Стрілка для Plant-based -->
+        <div class="arrow" id="plantArrow">
+          <span>&#8595;</span>
+        </div>
       </div>
     </div>
   </body>
