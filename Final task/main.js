@@ -1,17 +1,20 @@
-import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+document.addEventListener("DOMContentLoaded", () => {
+  const arrow1 = document.getElementById("arrow1"); // Стрілка для першого графіка
+  const secondChart = document.getElementById("secondChart"); // Другий графік
+  const animalArrow = document.getElementById("animalArrow"); // Стрілка під Animal products
+  const plantArrow = document.getElementById("plantArrow"); // Стрілка під Plant-based
 
-function updateGraph(type) {
-  if (type === "food") {
-    document.getElementById("food-bar").style.width = "60%";
+  // Відображення другого графіка
+  arrow1.addEventListener("click", () => {
+    secondChart.classList.toggle("hidden");
+  });
 
-    document.querySelector(".bar-label-right").innerText = "60%";
+  // Обробники для кожної стрілки (додатковий функціонал можна дописати тут)
+  animalArrow.addEventListener("click", () => {
+    alert("Clicked on Animal products arrow!");
+  });
 
-    document.getElementById("animal-bar").style.width = "40%";
-
-    document.querySelectorAll(".bar-label-right")[1].innerText = "40%";
-  } else if (type === "animal") {
-    document.getElementById("animal-bar").style.width = "70%";
-
-    document.querySelectorAll(".bar-label-right")[1].innerText = "70%";
-  }
-}
+  plantArrow.addEventListener("click", () => {
+    alert("Clicked on Plant-based arrow!");
+  });
+});
