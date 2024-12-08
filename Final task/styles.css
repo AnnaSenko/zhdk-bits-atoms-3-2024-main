@@ -3,55 +3,82 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column; /* Розташування блоків вертикально */
     align-items: flex-start;
-    height: 100vh;
+    height: auto;
     background-color: #f9f9f9;
     margin-top: 20px;
     margin-left: 20px;
-}
-
-.chart-container {
+  }
+  
+  .chart-container {
     text-align: left;
-}
-
-h1 {
-    font-size: 24px; /* Збільшено розмір заголовка */
+    width: 90%;
+    margin-bottom: 20px; /* Відступ між графіками */
+  }
+  
+  h1 {
+    font-size: 24px;
     margin-bottom: 30px;
-}
-
-.bar-chart {
+  }
+  
+  .bar-chart {
     display: flex;
-    width: 300%; /* Встановлено ширину на 100% від контейнера */
-    height: 100px; /* Збільшено висоту графіка */
-    border-radius: 30px; /* Збільшено радіус кутів */
+    width: 100%;
+    height: 100px; /* Висота графіка */
+    border-radius: 30px;
     overflow: hidden;
-}
-
-.bar {
+  }
+  
+  .bar {
     display: flex;
     padding-left: 10px;
     justify-content: left;
     align-items: center;
     color: white;
     font-weight: medium;
-    font-size: 16px; /* Збільшено розмір шрифту */
-}
-
-.food {
+    font-size: 16px;
+  }
+  
+  .food {
     background-color: #e57373;
-    flex: 3; /* Відображає 30% */
-}
-
-.other {
+    flex: 3;
+  }
+  
+  .other {
     background-color: #e0e0e0;
     color: black;
-    flex: 7; /* Відображає 70% */
-}
-
-.arrow {
+    flex: 7;
+  }
+  
+  .animal {
+    background-color: #ffa726;
+    flex: 5.8;
+  }
+  
+  .plant {
+    background-color: #fff176;
+    color: black;
+    flex: 4.2;
+  }
+  
+  .arrow {
     margin-top: 20px;
-    margin-left: 150px; /* Збільшено відступ зліва */
     font-weight: bold;
-    font-size: 40px; /* Виправлено розмір стрілки */
-}
+    font-size: 40px;
+    cursor: pointer;
+    text-align: left;
+    margin-left: 180px;;
+  }
+  
+  .arrows {
+    display: flex;
+    justify-content: space-around;
+    width: 100%; /* Ширина для двох стрілок */
+    margin-top: 20px;
+  }
+  
+  .hidden {
+    display: none; /* Приховує другий графік */
+  }
+  
