@@ -7,50 +7,51 @@ body {
     align-items: flex-start;
     height: 100vh;
     background-color: #f9f9f9;
-    
-  }
-  
-  .chart-container {
-    text-align: left;;
-  }
-  
-  h1 {
-    font-size: 40px; /* Збільшено розмір заголовка */
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.chart-container {
+    text-align: left;
+}
+
+h1 {
+    font-size: 24px; /* Збільшено розмір заголовка */
     margin-bottom: 30px;
-  }
-  
-  .bar-chart {
+}
+
+.bar-chart {
     display: flex;
-    width: 800%; /* Збільшено ширину */
-    height: 500 px; /* Збільшено висоту графіка */
-    margin: 0 auto;
+    width: 300%; /* Встановлено ширину на 100% від контейнера */
+    height: 100px; /* Збільшено висоту графіка */
     border-radius: 30px; /* Збільшено радіус кутів */
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Посилено тінь */
-  }
-  
-  .bar {
+}
+
+.bar {
     display: flex;
-    justify-content: center;
+    padding-left: 10px;
+    justify-content: left;
     align-items: center;
     color: white;
-    font-weight: bold;
-    font-size: 32px; /* Збільшено розмір шрифту */
-  }
-  
-  .food {
+    font-weight: medium;
+    font-size: 16px; /* Збільшено розмір шрифту */
+}
+
+.food {
     background-color: #e57373;
     flex: 3; /* Відображає 30% */
-  }
-  
-  .other {
+}
+
+.other {
     background-color: #e0e0e0;
     color: black;
     flex: 7; /* Відображає 70% */
-  }
-  
-  .arrow {
-    margin-top: 20px; /* Збільшено відступ зверху */
-    font-size: 40 px; /* Збільшено розмір стрілки */
-  }
-  
+}
+
+.arrow {
+    margin-top: 20px;
+    margin-left: 150px; /* Збільшено відступ зліва */
+    font-weight: bold;
+    font-size: 40px; /* Виправлено розмір стрілки */
+}
