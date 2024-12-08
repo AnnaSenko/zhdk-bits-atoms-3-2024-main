@@ -1,20 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const arrow1 = document.getElementById("arrow1"); // Стрілка для першого графіка
-  const secondChart = document.getElementById("secondChart"); // Другий графік
-  const animalArrow = document.getElementById("animalArrow"); // Стрілка під Animal products
-  const plantArrow = document.getElementById("plantArrow"); // Стрілка під Plant-based
+  const arrow1 = document.getElementById("arrow1");
+  const secondChart = document.getElementById("secondChart");
+  const animalArrow = document.getElementById("animalArrow");
+  const plantArrow = document.getElementById("plantArrow");
+  const thirdChart = document.getElementById("thirdChart");
+  const fourthChart = document.getElementById("fourthChart");
 
   // Відображення другого графіка
   arrow1.addEventListener("click", () => {
     secondChart.classList.toggle("hidden");
   });
 
-  // Обробники для кожної стрілки (додатковий функціонал можна дописати тут)
+  // Відображення третього графіка для "Animal products"
   animalArrow.addEventListener("click", () => {
-    alert("Clicked on Animal products arrow!");
+    if (!fourthChart.classList.contains("hidden")) {
+      fourthChart.classList.add("hidden");
+    }
+    thirdChart.classList.toggle("hidden");
   });
 
+  // Відображення третього графіка для "Plant-based"
   plantArrow.addEventListener("click", () => {
-    alert("Clicked on Plant-based arrow!");
+    if (!thirdChart.classList.contains("hidden")) {
+      thirdChart.classList.add("hidden");
+    }
+    fourthChart.classList.toggle("hidden");
   });
 });
