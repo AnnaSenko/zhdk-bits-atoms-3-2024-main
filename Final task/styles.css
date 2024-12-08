@@ -3,29 +3,29 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Розташування блоків вертикально */
+    flex-direction: column;
     align-items: flex-start;
     height: auto;
     background-color: #f9f9f9;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: 20px;
   }
   
   .chart-container {
     text-align: left;
     width: 90%;
-    margin-bottom: 20px; /* Відступ між графіками */
+    margin-bottom: 10px;
   }
   
   h1 {
     font-size: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
   
   .bar-chart {
     display: flex;
     width: 100%;
-    height: 100px; /* Висота графіка */
+    height: 100px;
     border-radius: 30px;
     overflow: hidden;
   }
@@ -35,13 +35,14 @@ body {
     padding-left: 10px;
     justify-content: left;
     align-items: center;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: medium;
     font-size: 16px;
   }
   
   .food {
     background-color: #e57373;
+    color: black;
     flex: 3;
   }
   
@@ -53,6 +54,7 @@ body {
   
   .animal {
     background-color: #ffa726;
+    color: black;
     flex: 5.8;
   }
   
@@ -62,23 +64,101 @@ body {
     flex: 4.2;
   }
   
+  .beef {
+    background-color: #f57c00;
+    color: black;
+    flex: 2.9;
+  }
+  
+  .dairy {
+    background-color: #fb8c00;
+    color: black;
+    flex: 0.9;
+  }
+  
+  .lamb {
+    background-color: #ffb74d;
+    color: black;
+    flex: 0.7;
+  }
+  
+  .pork {
+    background-color: #ffcc80;
+    color: black;
+    flex: 0.6;
+  }
+  
+  .chicken {
+    background-color: #ffe0b2;
+    color: black;
+    flex: 0.5;
+  }
+  
+  .eggs {
+    background-color: #fff3e0;
+    color: black;
+    flex: 0.2;
+  }
+  
+  .vegetable {
+    background-color: #cddc39;
+    color: black;
+    flex: 3;
+  }
+  
+  .grains {
+    background-color: #d4e157;
+    color: black;
+    flex: 2.5;
+  }
+  
+  .legumes {
+    background-color: #dce775;
+    color: black;
+    flex: 1.5;
+  }
+  
+  .fruits {
+    background-color: #e6ee9c;
+    color: black;
+    flex: 1.5;
+  }
+  
+  .nuts {
+    background-color: #f0f4c3;
+    color: black;
+    flex: 0.8;
+  }
+  
+  .oils {
+    background-color: #f9fbe7;
+    color: black;
+    flex: 0.5;
+  }
+  
+  .others {
+    background-color: #ffffff;
+    color: black;
+    flex: 0.1;
+  }
+  
   .arrow {
     margin-top: 20px;
-    font-weight: bold;
+    font-weight: semibold;
     font-size: 40px;
     cursor: pointer;
     text-align: left;
-    margin-left: 180px;;
+    margin-left: 180px;
   }
   
   .arrows {
     display: flex;
     justify-content: space-around;
-    width: 100%; /* Ширина для двох стрілок */
-    margin-top: 20px;
+    width: 100%;
+    margin-top: 10px;
   }
   
   .hidden {
-    display: none; /* Приховує другий графік */
+    display: none;
   }
   
