@@ -103,9 +103,9 @@ document.addEventListener("DOMContentLoaded", () => {
   arrow1.addEventListener("click", () => {
     if (!foodBar.classList.contains("expanded")) {
       // Збільшуємо ширину графіка і пропорції Food та Other
-      document.querySelector(".bar-chart").style.width = "calc(100% + 80px)"; // Збільшуємо ширину графіка
-      foodBar.style.flex = "10.6"; // Food займає більше місця
-      otherBar.style.flex = "0.4"; // Other займає менше місця
+      document.querySelector(".bar-chart").style.width = "calc(100% + 130px)"; // Збільшуємо ширину графіка
+      foodBar.style.flex = "10.3"; // Food займає більше місця
+      otherBar.style.flex = "0.7"; // Other займає менше місця
       foodBar.classList.add("expanded");
     } else {
       // Повертаємо до початкових розмірів
