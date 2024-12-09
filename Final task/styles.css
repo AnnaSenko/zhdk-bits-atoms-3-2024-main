@@ -59,6 +59,27 @@ body {
     flex: 5.8;
   }
   
+  /* Клас для активації hovering ефекту */
+.hover-active {
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Food */
+.food.hover-active {
+  background-color: #E67575;
+}
+
+/* Animal products */
+.animal.hover-active {
+  background-color: #F9A03F;
+}
+
+/* Plant-based */
+.plant.hover-active {
+  background-color: #F7F06D;
+}
+
   .plant {
     background-color: #FAF59E;
     color: black;
@@ -165,9 +186,9 @@ body {
   }
   
   .arrow {
-    margin-top: 20px;
-    font-weight: semibold;
-    font-size: 700;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 30px; /* Збільшено в 5 разів (40px * 5 = 200px) */
     cursor: pointer;
     text-align: left;
     margin-left: 180px;
@@ -177,7 +198,35 @@ body {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
+  }
+  .line {
+    display: block;
+    width: 2px;
+    height: 30px;
+    background-color: black;
+    margin: 0 auto;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .arrow span {
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .arrow.line span {
+    transform: rotate(90deg); /* Сховати стрілку шляхом повороту */
+    opacity: 0; /* Стрілка стає невидимою */
+  }
+  
+  .arrow.line::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 30px;
+    background-color: black;
+    margin: 0 auto;
+    transition: all 0.3s ease-in-out;
   }
   
   .hidden {
