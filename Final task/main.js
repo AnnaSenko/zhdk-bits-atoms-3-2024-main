@@ -10,7 +10,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const animalBar = document.querySelector(".animal");
   const plantBar = document.querySelector(".plant");
 
-  // Відображення другого графіка
+  // Функція для зміни стрілки на лінію
+  const toggleArrow = (activeArrow, chart) => {
+    if (chart.classList.contains("hidden")) {
+      // Якщо графік прихований, показуємо стрілку
+      activeArrow.innerHTML = "&#8595;"; // Стрілка вниз
+      activeArrow.classList.remove("line");
+    } else {
+      // Якщо графік показаний, змінюємо стрілку на лінію
+      activeArrow.innerHTML = ""; // Очищаємо текст стрілки
+      activeArrow.classList.add("line");
+    }
+  };
+
+  // Відображення другого графіка для Food
   arrow1.addEventListener("click", () => {
     secondChart.classList.toggle("hidden");
 
@@ -20,6 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       foodBar.classList.add("hover-active");
     }
+
+    // Виклик функції toggleArrow для стрілки Food
+    toggleArrow(arrow1, secondChart);
   });
 
   // Відображення третього графіка для "Animal products"
@@ -36,6 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       animalBar.classList.add("hover-active");
     }
+
+    // Виклик функції toggleArrow для стрілки Animal products
+    toggleArrow(animalArrow, thirdChart);
   });
 
   // Відображення третього графіка для "Plant-based"
@@ -52,6 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       plantBar.classList.add("hover-active");
     }
+
+    // Виклик функції toggleArrow для стрілки Plant-based
+    toggleArrow(plantArrow, fourthChart);
   });
 
   // Наведення на стрілку для Food
