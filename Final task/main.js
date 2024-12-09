@@ -10,32 +10,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const animalBar = document.querySelector(".animal");
   const plantBar = document.querySelector(".plant");
 
-  // Функція для зміни стрілки на лінію
-  const toggleArrow = (activeArrow, chart) => {
-    if (chart.classList.contains("hidden")) {
-      // Якщо графік прихований, показуємо стрілку
-      activeArrow.innerHTML = "&#8595;"; // Стрілка вниз
-      activeArrow.classList.remove("line");
-    } else {
-      // Якщо графік показаний, змінюємо стрілку на лінію
-      activeArrow.innerHTML = ""; // Очищаємо текст стрілки
-      activeArrow.classList.add("line");
-    }
-  };
-
-  // Відображення другого графіка для Food
+  // Відображення другого графіка
   arrow1.addEventListener("click", () => {
     secondChart.classList.toggle("hidden");
 
     // Увімкнення hover-active для Food
     if (secondChart.classList.contains("hidden")) {
       foodBar.classList.remove("hover-active");
+      arrow1.classList.remove("line"); // Повертаємо стрілку
     } else {
       foodBar.classList.add("hover-active");
+      arrow1.classList.add("line"); // Замінюємо стрілку на лінію
     }
-
-    // Виклик функції toggleArrow для стрілки Food
-    toggleArrow(arrow1, secondChart);
   });
 
   // Відображення третього графіка для "Animal products"
@@ -43,37 +29,37 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!fourthChart.classList.contains("hidden")) {
       fourthChart.classList.add("hidden");
       plantBar.classList.remove("hover-active");
+      plantArrow.classList.remove("line"); // Повертаємо стрілку для Plant
     }
     thirdChart.classList.toggle("hidden");
 
     // Увімкнення hover-active для Animal products
     if (thirdChart.classList.contains("hidden")) {
       animalBar.classList.remove("hover-active");
+      animalArrow.classList.remove("line"); // Повертаємо стрілку
     } else {
       animalBar.classList.add("hover-active");
+      animalArrow.classList.add("line"); // Замінюємо стрілку на лінію
     }
-
-    // Виклик функції toggleArrow для стрілки Animal products
-    toggleArrow(animalArrow, thirdChart);
   });
 
-  // Відображення третього графіка для "Plant-based"
+  // Відображення четвертого графіка для "Plant-based"
   plantArrow.addEventListener("click", () => {
     if (!thirdChart.classList.contains("hidden")) {
       thirdChart.classList.add("hidden");
       animalBar.classList.remove("hover-active");
+      animalArrow.classList.remove("line"); // Повертаємо стрілку для Animal
     }
     fourthChart.classList.toggle("hidden");
 
     // Увімкнення hover-active для Plant-based
     if (fourthChart.classList.contains("hidden")) {
       plantBar.classList.remove("hover-active");
+      plantArrow.classList.remove("line"); // Повертаємо стрілку
     } else {
       plantBar.classList.add("hover-active");
+      plantArrow.classList.add("line"); // Замінюємо стрілку на лінію
     }
-
-    // Виклик функції toggleArrow для стрілки Plant-based
-    toggleArrow(plantArrow, fourthChart);
   });
 
   // Наведення на стрілку для Food
