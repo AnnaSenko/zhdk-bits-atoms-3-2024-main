@@ -185,14 +185,6 @@ body {
     flex: 0.1;
   }
   
-  .arrow {
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 30px; /* Збільшено в 5 разів (40px * 5 = 200px) */
-    cursor: pointer;
-    text-align: left;
-    margin-left: 180px;
-  }
   
   .arrows {
     display: flex;
@@ -200,36 +192,34 @@ body {
     width: 100%;
     /*margin-top: 10px;*/
   }
-  .line {
-    display: block;
-    width: 2px;
-    height: 30px;
-    background-color: black;
-    margin: 0 auto;
-    transition: all 0.3s ease-in-out;
+  
+  .hidden {
+    display: none;
+  }
+  .arrow {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+    text-align: left;
+    margin-left: 180px;
   }
   
-  .arrow span {
-    display: inline-block;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+  .arrow .arrow-icon {
+    display: inline;
   }
   
-  .arrow.line span {
-    transform: rotate(90deg); /* Сховати стрілку шляхом повороту */
-    opacity: 0; /* Стрілка стає невидимою */
+  .arrow.line .arrow-icon {
+    display: none;
   }
   
   .arrow.line::after {
     content: "";
     display: block;
     width: 2px;
+    text-align: left;
     height: 30px;
     background-color: black;
     margin: 0 auto;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .hidden {
-    display: none;
   }
   
