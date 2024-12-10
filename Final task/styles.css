@@ -14,7 +14,7 @@ body {
   .chart-container {
     text-align: left;
     width: 90%;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
   }
   
   h1 {
@@ -32,13 +32,23 @@ body {
   
   .bar {
     display: flex;
-    padding-left: 10px;
-    justify-content: left;
-    align-items: center;
-    color: rgb(0, 0, 0);
+    flex-direction: column;
+    justify-content: space-between; /* Create space between label and percentage */
+    align-items: flex-start; 
     padding: 20px;
-    font-weight: 400; /* Regular weight */
+    font-weight: 400;
     font-size: 16px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .bar .label {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .bar .percentage {
+    font-size: 16px;
+    font-weight: 400; 
   }
 
   .food {
@@ -61,7 +71,7 @@ body {
   
   /* Клас для активації hovering ефекту */
 .hover-active {
-  font-weight: 500;
+  font-weight: 700;
   transition: all 0.3s ease-in-out;
 }
 
@@ -89,21 +99,21 @@ body {
   /* Ефект hovering для Food */
 .food:hover {
   background-color: #E67575;
-  font-weight: 500;
+  font-weight: 700;
   transition: all 0.3s ease-in-out;
 }
 
 /* Ефект hovering для Animal products */
 .animal:hover {
   background-color: #F9A03F;
-  font-weight: 500;
+  font-weight: 700;
   transition: all 0.3s ease-in-out;
 }
 
 /* Ефект hovering для Plant-based */
 .plant:hover {
   background-color: #F7F06D;
-  font-weight: 500;
+  font-weight: 700;
   transition: all 0.3s ease-in-out;
 }
 
@@ -197,12 +207,15 @@ body {
     display: none;
   }
   .arrow {
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 25px;
+    margin-top: 20px;
     cursor: pointer;
     text-align: left;
     margin-left: 180px;
+  }
+  
+  .arrow-icon {
+    width: 30px;
+    height: auto;
   }
   
   .arrow .arrow-icon {
@@ -216,8 +229,21 @@ body {
   .arrow.line::after {
     content: "";
     display: block;
-    width: 2px;
+    width: 1px;
     height: 30px;
     background-color: black;
     margin: 0 auto;
   }
+  
+  /* Додані стилі для зміни font-weight на 500 під час hover */
+.bar:hover .label, 
+.bar:hover .percentage {
+  font-weight: 500;
+  transition: font-weight 0.3s ease-in-out;
+}
+
+/* Hover-active ефект, щоб додатково змінювався стиль, якщо потрібно */
+.bar.hover-active .label, 
+.bar.hover-active .percentage {
+  font-weight: 500;
+}
