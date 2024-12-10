@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Emissions Graph</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="./main.js" defer></script>
+  </head>
+  <body>
+    <!-- Перший графік -->
+    <div class="chart-container">
+      <h1>Global emission 5.23 gt CO<sub>2</sub></h1>
+      <div class="bar-chart">
+        <div class="bar food">
+          <div class="label">Food</div>
+          <div class="percentage">30%</div>
+        </div>
+        <div class="bar other">
+          <div class="label">Other GHE</div>
+          <div class="percentage">70%</div>
+        </div>
+      </div>
+      <div class="arrow" id="arrow1">
+        <span class="arrow-icon">&#8595;</span>
+      </div>
+    </div>
+
+    <!-- Другий графік -->
+    <div class="chart-container hidden" id="secondChart">
+      <h1>Food industry emission 1.36 gt CO<sub>2</sub></h1>
+      <div class="bar-chart">
+        <div class="bar animal">
+          <div class="label">Animal products</div>
+          <div class="percentage">58%</div>
+        </div>
+        <div class="bar plant">
+          <div class="label">Plant-based</div>
+          <div class="percentage">42%</div>
+        </div>
+      </div>
+      <div class="arrows">
+        <div class="arrow" id="animalArrow">
+          <span class="arrow-icon">&#8595;</span>
+        </div>
+        <div class="arrow" id="plantArrow">
+          <span class="arrow-icon">&#8595;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Третій графік -->
+    <div class="chart-container hidden" id="thirdChart">
+      <h1>Beef and dairy products emission 0.73 gt CO<sub>2</sub></h1>
+      <div class="bar-chart">
+        <div class="bar beef">
+          <div class="label">Beef</div>
+          <div class="percentage">29%</div>
+        </div>
+        <div class="bar dairy">
+          <div class="label">Dairy</div>
+          <div class="percentage">9%</div>
+        </div>
+        <div class="bar lamb">
+          <div class="label">Lamb</div>
+          <div class="percentage">7%</div>
+        </div>
+        <div class="bar pork">
+          <div class="label">Pork</div>
+          <div class="percentage">6%</div>
+        </div>
+        <div class="bar chicken">
+          <div class="label">Chicken</div>
+          <div class="percentage">5%</div>
+        </div>
+        <div class="bar eggs">
+          <div class="label">Eggs</div>
+          <div class="percentage">2%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Четвертий графік -->
+    <div class="chart-container hidden" id="fourthChart">
+      <h1>Plant-based products emission 0.57 gt CO<sub>2</sub></h1>
+      <div class="bar-chart">
+        <div class="bar vegetable">
+          <div class="label">Vegetable</div>
+          <div class="percentage">30%</div>
+        </div>
+        <div class="bar grains">
+          <div class="label">Grains</div>
+          <div class="percentage">25%</div>
+        </div>
+        <div class="bar legumes">
+          <div class="label">Legumes & Pulses</div>
+          <div class="percentage">15%</div>
+        </div>
+        <div class="bar fruits">
+          <div class="label">Fruits</div>
+          <div class="percentage">15%</div>
+        </div>
+        <div class="bar nuts">
+          <div class="label">Nuts & Seeds</div>
+          <div class="percentage">8%</div>
+        </div>
+        <div class="bar oils">
+          <div class="label">Oils</div>
+          <div class="percentage">5%</div>
+        </div>
+        <div class="bar others">
+          <div class="label">Others</div>
+          <div class="percentage">1%</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
