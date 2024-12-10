@@ -216,6 +216,13 @@ body {
   .arrow-icon {
     width: 30px;
     height: auto;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  .arrow:hover .arrow-icon {
+    content: url("./9.svg");
+    
+    opacity: 0.9;
   }
   
   .arrow .arrow-icon {
@@ -234,7 +241,7 @@ body {
     background-color: black;
     margin: 0 auto;
   }
-  
+
   /* Додані стилі для зміни font-weight на 500 під час hover */
 .bar:hover .label, 
 .bar:hover .percentage {
