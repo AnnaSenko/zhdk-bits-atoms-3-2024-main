@@ -47,9 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Зміна розмірів Food і Other GHE
     if (!foodBar.classList.contains("expanded")) {
-      document.querySelector(".bar-chart").style.width = "calc(100% + 130px)";
-      foodBar.style.flex = "10.3"; // Food займає більше місця
-      otherBar.style.flex = "0.7"; // Other займає менше місця
+      document.querySelector(".bar-chart").style.width = "calc(100% + 150px)";
+      foodBar.style.flex = "10.1"; // Food займає більше місця
+      otherBar.style.flex = "0.9"; // Other займає менше місця
       foodBar.classList.add("expanded");
     } else {
       document.querySelector(".bar-chart").style.width = "100%";

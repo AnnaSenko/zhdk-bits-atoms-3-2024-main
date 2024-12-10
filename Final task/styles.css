@@ -13,13 +13,15 @@ body {
   
   .chart-container {
     text-align: left;
-    width: 90%;
+    width: 80%;
     margin-bottom: 0px;
   }
   
   h1 {
     font-weight: 700; /* Bold для заголовків */
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    font-size: 24px;
+    color: #352F36;
   }
   
   .bar-chart {
@@ -38,7 +40,7 @@ body {
     padding: 20px;
     font-weight: 400;
     font-size: 16px;
-    color: rgb(0, 0, 0);
+    color: #352F36;
   }
   
   .bar .label {
@@ -53,19 +55,19 @@ body {
 
   .food {
     background-color: #EC9898;
-    color: black;
+    color: #352F36;
     flex: 3;
   }
   
   .other {
     background-color: #F5F5F5;
-    color: black;
+    color: #352F36;
     flex: 7;
   }
   
   .animal {
     background-color: #FBBA74;
-    color: black;
+    color: #352F36;
     flex: 5.8;
   }
   
@@ -119,79 +121,79 @@ body {
 
   .beef {
     background-color: #D6740A;
-    color: black;
+    color: #352F36;
     flex: 2.9;
   }
   
   .dairy {
     background-color: #EA7E0B;
-    color: black;
+    color: #352F36;
     flex: 0.9;
   }
   
   .lamb {
     background-color: #F59229;
-    color: black;
+    color: #352F36;
     flex: 0.7;
   }
   
   .pork {
     background-color: #F8B062;
-    color: black;
+    color: #352F36;
     flex: 0.6;
   }
   
   .chicken {
     background-color: #FBCE9D;
-    color: black;
+    color: #352F36;
     flex: 0.5;
   }
   
   .eggs {
     background-color: #FDE1C4;
-    color: black;
+    color: #352F36;
     flex: 0.2;
   }
   
   .vegetable {
     background-color: #D5CB0B;
-    color: black;
+    color: #352F36;
     flex: 3;
   }
   
   .grains {
     background-color: #E9DE0C;
-    color: black;
+    color: #352F36;
     flex: 2.5;
   }
   
   .legumes {
     background-color: #F3E816;
-    color: black;
+    color: #352F36;
     flex: 1.5;
   }
   
   .fruits {
     background-color: #F6EE51;
-    color: black;
+    color: #352F36;
     flex: 1.5;
   }
   
   .nuts {
     background-color: #F9F38B;
-    color: black;
+    color: #352F36;
     flex: 0.8;
   }
   
   .oils {
     background-color: #FBF7B1;
-    color: black;
+    color: #352F36;
     flex: 0.5;
   }
   
   .others {
     background-color: #FDFBD8;
-    color: black;
+    color: #352F36;
     flex: 0.1;
   }
   
@@ -237,7 +239,7 @@ body {
     display: block;
     width: 1px;
     height: 30px;
-    background-color: black;
+    background-color: #352F36;
     margin: 0 auto;
   }
 
@@ -257,7 +259,7 @@ body {
 /* Стиль для SVG лінії */
 .svg-line {
   display: block;
-  width: 1360px; /* Ширина лінії */
+  width: 1210px; /* Ширина лінії */
   height: auto;
   margin: 10px auto;
 }
