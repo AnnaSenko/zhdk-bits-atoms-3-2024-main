@@ -221,7 +221,6 @@ body {
   
   .arrow:hover .arrow-icon {
     content: url("./9.svg");
-    
     opacity: 0.9;
   }
   
@@ -253,4 +252,12 @@ body {
 .bar.hover-active .label, 
 .bar.hover-active .percentage {
   font-weight: 500;
+}
+
+/* Стиль для SVG лінії */
+.svg-line {
+  display: block;
+  width: 1360px; /* Ширина лінії */
+  height: auto;
+  margin: 10px auto;
 }
