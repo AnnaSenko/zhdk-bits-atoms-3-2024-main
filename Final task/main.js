@@ -23,6 +23,21 @@ document.addEventListener("DOMContentLoaded", () => {
       foodBar.classList.add("hover-active");
       arrow1.classList.add("line"); // Замінюємо стрілку на лінію
     }
+
+    // Зміна розмірів Food і Other GHE
+    if (!foodBar.classList.contains("expanded")) {
+      // Збільшуємо ширину графіка і пропорції Food та Other
+      document.querySelector(".bar-chart").style.width = "calc(100% + 130px)";
+      foodBar.style.flex = "10.3"; // Food займає більше місця
+      otherBar.style.flex = "0.7"; // Other займає менше місця
+      foodBar.classList.add("expanded");
+    } else {
+      // Повертаємо до початкових розмірів
+      document.querySelector(".bar-chart").style.width = "100%";
+      foodBar.style.flex = "3";
+      otherBar.style.flex = "7";
+      foodBar.classList.remove("expanded");
+    }
   });
 
   // Відображення третього графіка для "Animal products"
@@ -69,7 +84,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   arrow1.addEventListener("mouseout", () => {
-    // Зберігаємо hover-ефект, якщо графік відкритий
     if (secondChart.classList.contains("hidden")) {
       foodBar.classList.remove("hover-active");
     }
@@ -81,7 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   animalArrow.addEventListener("mouseout", () => {
-    // Зберігаємо hover-ефект, якщо графік відкритий
     if (thirdChart.classList.contains("hidden")) {
       animalBar.classList.remove("hover-active");
     }
@@ -93,26 +106,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   plantArrow.addEventListener("mouseout", () => {
-    // Зберігаємо hover-ефект, якщо графік відкритий
     if (fourthChart.classList.contains("hidden")) {
       plantBar.classList.remove("hover-active");
-    }
-  });
-
-  // Додатковий функціонал для зміни розміру Food і Other GHE
-  arrow1.addEventListener("click", () => {
-    if (!foodBar.classList.contains("expanded")) {
-      // Збільшуємо ширину графіка і пропорції Food та Other
-      document.querySelector(".bar-chart").style.width = "calc(100% + 130px)"; // Збільшуємо ширину графіка
-      foodBar.style.flex = "10.3"; // Food займає більше місця
-      otherBar.style.flex = "0.7"; // Other займає менше місця
-      foodBar.classList.add("expanded");
-    } else {
-      // Повертаємо до початкових розмірів
-      document.querySelector(".bar-chart").style.width = "100%"; // Повертаємо початкову ширину
-      foodBar.style.flex = "3"; // Початкова ширина Food
-      otherBar.style.flex = "7"; // Початкова ширина Other
-      foodBar.classList.remove("expanded");
     }
   });
 });
